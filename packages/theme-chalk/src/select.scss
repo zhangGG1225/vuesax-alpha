@@ -7,7 +7,8 @@ $iconActiveMargin: -4px;
 
 .#{$namespace}-select-enter-active,
 .#{$namespace}-select-leave-active {
-  transition: all 0s ease 0s, top 0s, left 0s, transform 0.25s ease, opacity 0.12s ease !important;
+  transition: all 0s ease 0s, top 0s, left 0s, transform 0.25s ease,
+    opacity 0.12s ease !important;
 }
 .#{$namespace}-select-enter-from,
 .#{$namespace}-select-leave-to {

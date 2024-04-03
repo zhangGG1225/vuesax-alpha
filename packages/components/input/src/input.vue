@@ -114,11 +114,12 @@ import { computed, useSlots } from 'vue'
 import { IconClose, IconLoading } from '@vuesax-alpha/components/icon'
 import { VsCollapseTransition } from '@vuesax-alpha/components/collapse-transition'
 import {
-  useBaseComponent,
+  useColor,
   useDeprecated,
   useId,
   useNamespace,
   useProp,
+  useVuesaxBaseComponent,
 } from '@vuesax-alpha/hooks'
 import { NOOP, getVsColor } from '@vuesax-alpha/utils'
 import { inputEmits, inputProps } from './input'
@@ -224,9 +225,9 @@ const {
   clear,
 } = useInput(props, emit)
 
+const vsBaseClasses = useVuesaxBaseComponent(useColor())
 const inputKls = computed(() => [
-  useBaseComponent(props.color),
-
+  vsBaseClasses,
   ns.b(),
   props.wrapClasses,
   { [ns.is(props.inputStyle)]: !!props.inputStyle },

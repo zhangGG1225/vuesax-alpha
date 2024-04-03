@@ -52,7 +52,11 @@
 
 <script lang="ts" setup>
 import { computed, onMounted, ref, useSlots, watch } from 'vue'
-import { useBaseComponent, useNamespace } from '@vuesax-alpha/hooks'
+import {
+  useColor,
+  useNamespace,
+  useVuesaxBaseComponent,
+} from '@vuesax-alpha/hooks'
 import { getVsColor, setCssVar } from '@vuesax-alpha/utils'
 import { IconLoading } from '@vuesax-alpha/components/icon'
 import { avatarProps } from './avatar'
@@ -73,9 +77,10 @@ const root$ = ref<HTMLElement>()
 const { isHidden, isLastest, getText, showLastest, moreNumber } =
   useAvatarStatus(slots)
 
+const vsBaseClasses = useVuesaxBaseComponent(useColor())
 const avatarClassess = computed(() => [
-  ...useBaseComponent(props.color),
   ns.b('content'),
+  vsBaseClasses,
   props.history && 'history',
   props.historyGradient && 'history--gradient',
   props.shape != 'default' && `${ns.be('content', props.shape)}`,

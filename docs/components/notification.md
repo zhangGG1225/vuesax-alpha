@@ -622,7 +622,7 @@ Change the notification style with the `border` property by adding a border of t
 
 ## Flat
 
-Change the style of the notification with the `flat` property, having this property changes to lighter colors and the text  of the `color` property, this property is a boolean so you can only use the value `true`
+Change the style of the notification with the `flat` property, having this property changes to lighter colors and the text of the `color` property, this property is a boolean so you can only use the value `true`
 
 <template #example>
 <notification-flat />

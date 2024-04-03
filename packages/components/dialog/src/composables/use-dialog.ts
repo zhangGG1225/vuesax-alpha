@@ -1,9 +1,10 @@
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useTimeoutFn } from '@vueuse/core'
 import {
-  useBaseComponent,
+  useColor,
   useLockscreen,
   useNamespace,
+  useVuesaxBaseComponent,
   useZIndex,
 } from '@vuesax-alpha/hooks'
 import { UPDATE_MODEL_EVENT } from '@vuesax-alpha/constants'
@@ -16,6 +17,7 @@ export const useDialog = (props: DialogProps, emit: DialogEmitFn) => {
   const closed = ref(false)
   const ns = useNamespace('dialog')
   const { nextZIndex } = useZIndex()
+  const vsBaseClasses = useVuesaxBaseComponent(useColor())
 
   const zIndex = ref(nextZIndex())
 
@@ -104,7 +106,7 @@ export const useDialog = (props: DialogProps, emit: DialogEmitFn) => {
 
   const dialogKls = computed(() => [
     ns.b('original'),
-    useBaseComponent(props.color),
+    vsBaseClasses,
     ns.m(props.shape),
     {
       [ns.m('rebound')]: rebound.value,

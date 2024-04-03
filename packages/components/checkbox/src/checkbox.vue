@@ -32,7 +32,12 @@
 
 <script lang="ts" setup>
 import { computed, useSlots } from 'vue'
-import { useBaseComponent, useId, useNamespace } from '@vuesax-alpha/hooks'
+import {
+  useColor,
+  useId,
+  useNamespace,
+  useVuesaxBaseComponent,
+} from '@vuesax-alpha/hooks'
 import { getVsColor } from '@vuesax-alpha/utils'
 import { IconCheck, IconLoading } from '@vuesax-alpha/components/icon'
 import { checkboxEmits, checkboxProps } from './checkbox'
@@ -55,10 +60,10 @@ const { isChecked, isDisabled, model, hasOwnLabel, handleChange } = useCheckbox(
   emit,
   slots
 )
-
+const vsBaseClasses = useVuesaxBaseComponent(useColor())
 const checkboxKls = computed(() => [
   ns.b(),
-  useBaseComponent(props.color),
+  vsBaseClasses,
   ns.is('disabled', isDisabled.value),
   ns.is('checked', isChecked.value),
   ns.is('label-before', props.labelBefore),

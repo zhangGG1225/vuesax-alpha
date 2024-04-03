@@ -44,7 +44,11 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useBaseComponent, useNamespace } from '@vuesax-alpha/hooks'
+import {
+  useColor,
+  useNamespace,
+  useVuesaxBaseComponent,
+} from '@vuesax-alpha/hooks'
 import VsPopper from '@vuesax-alpha/components/popper'
 import { getVsColor } from '@vuesax-alpha/utils'
 import { tooltipProps } from './tooltip'
@@ -66,10 +70,10 @@ const tooltipStyle = computed(() => [
     color: getVsColor(props.color),
   }),
 ])
-
+const vsBaseClasses = useVuesaxBaseComponent(useColor())
 const tooltipKls = computed(() => [
   ns.b(),
-  useBaseComponent(props.color),
+  vsBaseClasses,
   ns.is('loading', props.loading),
   ns.is(props.type, !!props.type),
   ns.is(props.shape, !!props.shape),

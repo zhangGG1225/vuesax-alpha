@@ -20,7 +20,11 @@
 <script setup lang="ts">
 import { computed, inject, nextTick, ref, unref, useSlots, watch } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { useBaseComponent, useNamespace } from '@vuesax-alpha/hooks'
+import {
+  useColor,
+  useNamespace,
+  useVuesaxBaseComponent,
+} from '@vuesax-alpha/hooks'
 import { tableContextKey } from '@vuesax-alpha/tokens'
 import { getVsColor, isArray, throwError } from '@vuesax-alpha/utils'
 
@@ -57,9 +61,9 @@ const isSelected = computed(() => {
 
   return modelValue.some((e) => isEqual(e, props.data))
 })
-
+const vsBaseClasses = useVuesaxBaseComponent(useColor())
 const trKls = computed(() => [
-  useBaseComponent(props.color),
+  vsBaseClasses,
   ns.b('tr'),
   ns.is('selected', isSelected.value),
   ns.is('expand', expand.value),

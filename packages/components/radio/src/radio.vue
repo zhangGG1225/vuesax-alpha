@@ -31,10 +31,10 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import {
-  useBaseComponent,
   useColor,
   useId,
   useNamespace,
+  useVuesaxBaseComponent,
 } from '@vuesax-alpha/hooks'
 import { getVsColor } from '@vuesax-alpha/utils'
 import { IconLoading } from '@vuesax-alpha/components/icon'
@@ -55,9 +55,10 @@ const uid = useId()
 const { isDisabled, loading, model, focus, checked } = useRadio(props, emit)
 
 const color = useColor('primary')
+const vsBaseClasses = useVuesaxBaseComponent(color)
 
 const radioKls = computed(() => [
-  useBaseComponent(),
+  vsBaseClasses,
   ns.b('wrapper'),
   ns.is('loading', loading.value),
   ns.is('disabled', isDisabled.value),

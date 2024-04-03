@@ -39,7 +39,11 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useBaseComponent, useColor, useNamespace } from '@vuesax-alpha/hooks'
+import {
+  useColor,
+  useNamespace,
+  useVuesaxBaseComponent,
+} from '@vuesax-alpha/hooks'
 import { IconLoading } from '@vuesax-alpha/components/icon'
 import { getVsColor } from '@vuesax-alpha/utils'
 import { switchEmits, switchProps } from './switch'
@@ -61,9 +65,9 @@ const { isLoading, checked, isDisabled, handleChange, switchValue } = useSwitch(
   props,
   emit
 )
-
+const vsBaseClasses = useVuesaxBaseComponent(color)
 const switchKls = computed(() => [
-  useBaseComponent(),
+  vsBaseClasses,
   ns.b(),
   ns.is('loading', isLoading.value),
   ns.is(props.shape),

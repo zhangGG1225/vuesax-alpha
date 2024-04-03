@@ -60,9 +60,9 @@
 import { computed, onBeforeUnmount, onMounted, ref, unref } from 'vue'
 import { useTimeoutFn } from '@vueuse/core'
 import {
-  useBaseComponent,
   useColor,
   useGlobalComponentSettings,
+  useVuesaxBaseComponent,
 } from '@vuesax-alpha/hooks'
 import { IconClose, VsIcon } from '@vuesax-alpha/components/icon'
 import { addUnit, getVsColor } from '@vuesax-alpha/utils'
@@ -84,9 +84,10 @@ const notifyRef = ref<HTMLElement>()
 const visible = ref(false)
 let timer: (() => void) | undefined = undefined
 
+const vsBaseClasses = useVuesaxBaseComponent(color)
 const notifyKls = computed(() => [
   ns.b(),
-  useBaseComponent(color),
+  vsBaseClasses,
   ns.is('flat', props.flat),
   ns.is('sticky', props.sticky),
   ns.is('border', !!props.border),

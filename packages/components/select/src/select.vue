@@ -21,7 +21,7 @@
     :on-keydown="onKeydown"
     :teleported="teleported"
     :strategy="strategy"
-    :popper-class="[ns.e('content'), useBaseComponent(color)]"
+    :popper-class="[ns.e('content'), useVuesaxBaseComponent(color)]"
     :popper-style="colorCssVar"
     :show-arrow="false"
     :offset="0"
@@ -208,7 +208,11 @@ import VsCollapseTransition from '@vuesax-alpha/components/collapse-transition'
 import VsScrollbar from '@vuesax-alpha/components/scrollbar'
 import VsPopper from '@vuesax-alpha/components/popper'
 import { ChevronDown } from '@vuesax-alpha/icons-vue'
-import { useBaseComponent, useColor, useNamespace } from '@vuesax-alpha/hooks'
+import {
+  useColor,
+  useNamespace,
+  useVuesaxBaseComponent,
+} from '@vuesax-alpha/hooks'
 import { getVsColor } from '@vuesax-alpha/utils'
 import VsOption from './option.vue'
 import VsChip from './chip.vue'

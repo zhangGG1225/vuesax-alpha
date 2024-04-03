@@ -27,7 +27,11 @@ import {
   watch,
 } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { useBaseComponent, useNamespace } from '@vuesax-alpha/hooks'
+import {
+  useColor,
+  useNamespace,
+  useVuesaxBaseComponent,
+} from '@vuesax-alpha/hooks'
 import { getVsColor } from '@vuesax-alpha/utils'
 import {
   navbarContextKey,
@@ -64,10 +68,10 @@ const state = reactive({
   lineNotTransition: false,
 })
 
+const vsBaseClasses = useVuesaxBaseComponent(useColor())
 const navbarKls = computed(() => [
   ns.b(),
-  useBaseComponent(props.color),
-
+  vsBaseClasses,
   ns.is('fixed', props.fixed),
   ns.is('shadow', props.shadow),
   ns.is('not-line', props.notLine),

@@ -27,7 +27,11 @@
 
 <script lang="ts" setup>
 import { computed, onMounted, provide, ref, watch } from 'vue'
-import { useBaseComponent, useColor, useNamespace } from '@vuesax-alpha/hooks'
+import {
+  useColor,
+  useNamespace,
+  useVuesaxBaseComponent,
+} from '@vuesax-alpha/hooks'
 import { ClickOutside as vClickOutside } from '@vuesax-alpha/directives'
 import { getVsColor, setColor } from '@vuesax-alpha/utils'
 import { sidebarContextKey } from '@vuesax-alpha/tokens'
@@ -48,10 +52,10 @@ const sidebarRef = ref<HTMLElement>()
 
 const staticWidth = ref<number>(260)
 const reduceInternal = ref<boolean>(false)
-
+const vsBaseClasses = useVuesaxBaseComponent(color)
 const sidebarKls = computed(() => [
   ns.b(),
-  useBaseComponent(),
+  vsBaseClasses,
   ns.is('reduce', reduceInternal.value),
   ns.is('open', props.open),
   ns.is('not-line-active', props.notLineActive),

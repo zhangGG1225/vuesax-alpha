@@ -59,7 +59,11 @@ import { computed, useSlots } from 'vue'
 import { getVsColor, isBoolean } from '@vuesax-alpha/utils'
 import { IconClose, IconPlus } from '@vuesax-alpha/components/icon'
 import { VsCollapseTransition } from '@vuesax-alpha/components/collapse-transition'
-import { useBaseComponent, useNamespace } from '@vuesax-alpha/hooks'
+import {
+  useColor,
+  useNamespace,
+  useVuesaxBaseComponent,
+} from '@vuesax-alpha/hooks'
 import { UPDATE_MODEL_EVENT } from '@vuesax-alpha/constants'
 import { alertEmits, alertProps } from './alert'
 import { useAlertDeprecated } from './use-deprecated'
@@ -77,8 +81,10 @@ useAlertDeprecated(props)
 
 const ns = useNamespace('alert')
 
+const vsBaseClasses = useVuesaxBaseComponent(useColor())
+
 const alertClasses = computed(() => [
-  ...useBaseComponent(props.color),
+  vsBaseClasses,
   ns.b(),
   props.type && ns.m(props.type),
   getPages.value.length > 0 && ns.m('pages'),

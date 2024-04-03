@@ -26,7 +26,11 @@
 
 <script lang="ts" setup>
 import { computed, ref, useSlots } from 'vue'
-import { useBaseComponent, useNamespace } from '@vuesax-alpha/hooks'
+import {
+  useColor,
+  useNamespace,
+  useVuesaxBaseComponent,
+} from '@vuesax-alpha/hooks'
 import { IconLoading } from '@vuesax-alpha/components/icon'
 import {
   getVsColor,
@@ -47,10 +51,12 @@ const ns = useNamespace('button')
 
 const root$ = ref<HTMLElement>()
 
+const vsBaseClasses = useVuesaxBaseComponent(useColor())
+
 const buttonClasses = computed(() => {
   return [
     ns.b(),
-    useBaseComponent(props.color),
+    vsBaseClasses,
     props.shape && ns.m(props.shape),
     props.active && ns.m('active'),
     slots.animate && ns.m('animate'),
