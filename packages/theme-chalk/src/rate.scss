@@ -46,7 +46,7 @@ $rate-size: map.merge(
     position: relative;
     font-size: 0;
     vertical-align: middle;
-    color: getCssVar('rate-void-color');
+    color: getColor('rate-void-color');
     line-height: normal;
   }
 
@@ -99,7 +99,7 @@ $rate-size: map.merge(
   @include when(disabled) {
     @include e(item) {
       cursor: auto;
-      color: getCssVar('rate', 'disabled-void-color');
+      color: getColor('rate-disabled-void-color');
     }
   }
 }
