@@ -556,7 +556,7 @@ describe('runtime', () => {
 
     expect(warnHandler.mock.calls[0][0]).toBe('Missing required prop: "qux"')
     expect(warnHandler.mock.calls[1][0]).toBe(
-      'Invalid prop: validation failed for prop "qux2". Expected one of ["a", "b", "c"], got value undefined.'
+      'Invalid prop: custom validator check failed for prop "qux2".'
     )
   })
 })
