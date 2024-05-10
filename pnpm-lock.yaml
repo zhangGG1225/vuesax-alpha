@@ -265,7 +265,7 @@ importers:
         specifier: 4.2.4
         version: 4.2.4(vue@3.3.1)
       vuesax-alpha:
-        specifier: 0.2.0-beta.75
+        specifier: npm:vuesax-alpha@latest
         version: 0.2.0-beta.75(vue@3.3.1)
     devDependencies:
       '@types/prismjs':
