@@ -90,7 +90,7 @@ $rate-size: map.merge(
   @each $size in (large, small) {
     @include m($size) {
       height: map.get($rate-height, $size);
-           & .#{bem('rate', 'icon')} {
+      & .#{bem('rate', 'icon')} {
         font-size: map.get($rate-size, $size);
       }
     }

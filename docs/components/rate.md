@@ -56,9 +56,9 @@ PROPS:
     link: null
     usage: '#default'
     code: >
-       <vs-rate v-model="value2" colors="['#99A9BF', '#F7BA2A', '#FF9900']" />
+      <vs-rate v-model="value2" colors="['#99A9BF', '#F7BA2A', '#FF9900']" />
     #__________________________________
-  - name:  void-color
+  - name: void-color
     type: String
     values: String
     description: component of unselected icons.
@@ -233,7 +233,7 @@ EVENTS:
   - name: change
     type: 'Function'
     values: '(value: number) => void'
-    description: 	Triggers when rate value is changed.
+    description: Triggers when rate value is changed.
     default: null
     link: null
     code: null
@@ -243,16 +243,16 @@ EXPOSES:
   - name: setCurrentValue
     type: 'Function'
     values: '(value: number) => void'
-    description: 	set current value.
+    description: set current value.
     default: null
     link: null
     code: null
     usage: ''
-   #__________________________________
+    #__________________________________
   - name: resetCurrentValue
     type: 'Function'
     values: '(value: number) => void'
-    description: 	reset current value.
+    description: reset current value.
     default: null
     link: null
     code: null
@@ -426,8 +426,6 @@ You can customize icons by passing `icons` an array with three elements or a obj
 @[code{12-18} vue](../.vuepress/components/rate/more-icons.vue)
 
 </template>
-
-
 
 </card>
 

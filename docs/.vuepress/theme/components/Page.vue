@@ -8,7 +8,6 @@
       >
         <i class="bx bx-left-arrow-alt" />
       </router-link>
-      <template v-else />
 
       <div class="header__content">
         <div ref="$flex" class="flex-header">

@@ -67,17 +67,14 @@
                   <a v-if="tr.usage" :href="tr.usage" class="btn-usage">
                     Usage <i class="bx bx-code-block" />
                   </a>
-                  <template v-else />
                   <a
                     v-if="tr.code"
-                    :href="`#vs-api-${tr.name}`"
                     class="btn-toggle-code"
-                    @click="toggleCode($event, tr)"
+                    @click="toggleCode($event)"
                   >
                     <span class="open">Open <i class="bx bx-code-alt" /></span>
                     <span class="close">Close <i class="bx bx-x" /></span>
                   </a>
-                  <template v-else />
                 </td>
 
                 <td class="bugx">
@@ -104,7 +101,6 @@
                   v-html="getCode(tr.code)"
                 />
               </tr>
-              <template v-else />
             </tbody>
           </table>
         </template>
@@ -121,7 +117,8 @@ import prism from 'prismjs'
 import { useClipboard } from '@vueuse/core'
 
 import { isExternal } from '../util'
-import Badge from '../global-components/Badge.vue'
+import type { PageData, PageFrontmatter } from '@vuepress/client'
+import type { ComputedRef } from 'vue'
 import type {
   ThemeNormalApiFrontmatter,
   ThemeNormalPropsFrontmatter,
@@ -135,8 +132,14 @@ type Tables = {
 }
 
 const route = useRoute()
-const pageData = usePageData()
-const pageFrontmatter = usePageFrontmatter<ThemeNormalApiFrontmatter>()
+const pageData: ComputedRef<
+  PageData<{
+    title: string
+  }>
+> = usePageData() as any
+
+const pageFrontmatter: ComputedRef<PageFrontmatter<ThemeNormalApiFrontmatter>> =
+  usePageFrontmatter() as any
 
 const { copied, copy } = useClipboard({ legacy: true })
 
@@ -276,7 +279,7 @@ const getValues = (values: string) => {
   })
   return spanValues
 }
-const toggleCode = (evt: MouseEvent, tr: ThemeNormalPropsFrontmatter) => {
+const toggleCode = (evt: MouseEvent) => {
   const trParent = (evt.target as HTMLElement).closest('tr')
   const nextCode = trParent?.nextElementSibling
 
@@ -284,10 +287,6 @@ const toggleCode = (evt: MouseEvent, tr: ThemeNormalPropsFrontmatter) => {
 
   const preElement = nextCode.querySelector('pre')
   if (nextCode.classList.contains('open')) {
-    ;(evt.target as HTMLElement).setAttribute(
-      'href',
-      `#vs-api-close-${tr.name}`
-    )
     nextCode.classList.remove('open')
     ;(evt.target as HTMLElement).classList.remove('open-btn')
 
@@ -296,7 +295,6 @@ const toggleCode = (evt: MouseEvent, tr: ThemeNormalPropsFrontmatter) => {
       preElement.style.maxHeight = '0px'
     }
   } else {
-    ;(evt.target as HTMLElement).setAttribute('href', `#vs-api-${tr.name}`)
     ;(evt.target as HTMLElement).classList.add('open-btn')
     nextCode.classList.add('open')
     // console.dir()

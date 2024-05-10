@@ -95,7 +95,6 @@
         @blur="focused = false"
         @show-suggestions="handleShowSuggestions"
       />
-      <template v-else />
     </div>
   </header>
 </template>

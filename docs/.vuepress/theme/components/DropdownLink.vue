@@ -8,7 +8,6 @@
         <i v-else class="bx bx-dots-horizontal-rounded" />
 
         <i v-if="hasFle" class="bx bx-chevron-down not-remove" />
-        <template v-else />
       </span>
     </a>
 
@@ -35,14 +34,12 @@
                   >
                     <NavLink :nav-item="childSubItem" />
                   </template>
-                  <template v-else />
                 </li>
               </ul>
             </template>
 
             <NavLink v-else :nav-item="subItem" />
           </template>
-          <template v-else />
         </li>
       </ul>
     </DropdownTransition>

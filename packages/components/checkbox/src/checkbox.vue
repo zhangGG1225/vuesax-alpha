@@ -13,6 +13,7 @@
         @change="handleChange"
       />
       <div :class="ns.em('input', 'mask')">
+        <!-- <svg class="checkbox-box-check" viewBox="0 0 24 24"><use href="#check" x="-1"></use></svg> -->
         <icon-check v-if="!$slots.icon" :indeterminate="indeterminate" />
         <slot v-else name="icon" />
       </div>

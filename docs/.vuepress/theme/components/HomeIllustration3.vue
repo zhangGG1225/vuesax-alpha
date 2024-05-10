@@ -14,7 +14,6 @@
           {{ feature.action.text }}
         </button>
       </template>
-      <template v-else />
     </div>
   </div>
 </template>

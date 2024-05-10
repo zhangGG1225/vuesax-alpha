@@ -21,7 +21,6 @@
     >
       <span>{{ item.text }}</span>
       <span v-if="collapsable" class="arrow" :class="open ? 'down' : 'right'" />
-      <template v-else />
     </router-link>
 
     <p

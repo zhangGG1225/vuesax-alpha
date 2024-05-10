@@ -5,7 +5,6 @@
         <icon-loading />
       </div>
     </div>
-    <template v-else />
 
     <div
       :class="[
@@ -16,7 +15,7 @@
       <template v-if="$slots.text">
         {{ getText }}
       </template>
-      <template v-else />
+
       <slot />
     </div>
 
@@ -36,17 +35,14 @@
       </div>
       <slot v-else name="badge" />
     </div>
-    <template v-else />
 
     <div v-if="isLastest" v-show="showLastest" :class="ns.e('lastest')">
       {{ `+${moreNumber}` }}
     </div>
-    <template v-else />
 
     <div v-if="$slots.icons" :class="ns.e('icons')">
       <slot name="icons" />
     </div>
-    <template v-else />
   </div>
 </template>
 

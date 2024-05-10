@@ -11,7 +11,6 @@
     >
       <slot name="example" />
     </div>
-    <template v-else />
 
     <div
       v-if="$slots.template || $slots.script || $slots.style"
@@ -29,7 +28,6 @@
         </template>
       </Codex>
     </div>
-    <template v-else />
   </div>
 </template>
 

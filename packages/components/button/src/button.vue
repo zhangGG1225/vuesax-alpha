@@ -15,12 +15,10 @@
     >
       <slot name="animate" />
     </div>
-    <template v-else />
 
     <div v-if="loading" :class="ns.e('loading')">
       <icon-loading />
     </div>
-    <template v-else />
   </button>
 </template>
 

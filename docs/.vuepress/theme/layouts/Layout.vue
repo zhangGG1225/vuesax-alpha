@@ -42,7 +42,6 @@
         }"
         @toggle-sidebar="toggleSidebar"
       />
-      <template v-else />
     </ClientOnly>
 
     <div class="sidebar-mask" @click="toggleSidebar(false)" />
@@ -80,7 +79,6 @@
 
     <ClientOnly>
       <Config v-if="!pageFrontmatter.navbar" />
-      <template v-else />
     </ClientOnly>
   </div>
 </template>

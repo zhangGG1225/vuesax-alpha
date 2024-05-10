@@ -11,7 +11,6 @@
         >
           <i class="bx bxl-codepen" />
         </li>
-        <template v-else />
 
         <li v-if="codesandbox" title="Codesandbox" @click="openCodesandbox">
           <svg
@@ -32,7 +31,6 @@
             />
           </svg>
         </li>
-        <template v-else />
 
         <li
           title="Copy code"
@@ -65,7 +63,6 @@
           >
             Template
           </li>
-          <template v-else />
 
           <li
             v-if="$slots.script"
@@ -74,7 +71,6 @@
           >
             Script
           </li>
-          <template v-else />
 
           <li
             v-if="$slots.style"
@@ -83,7 +79,6 @@
           >
             Style
           </li>
-          <template v-else />
 
           <li
             v-if="Object.keys($slots).length > 1"
@@ -92,7 +87,6 @@
           >
             All
           </li>
-          <template v-else />
         </ul>
         <div class="con-codes">
           <CardTransitionCodes>
@@ -106,7 +100,6 @@
 
               <CardFooter :active="active" @toggle-code="toggleCode" />
             </div>
-            <template v-else />
           </CardTransitionCodes>
           <CardTransitionCodes>
             <div
@@ -119,7 +112,6 @@
 
               <CardFooter :active="active" @toggle-code="toggleCode" />
             </div>
-            <template v-else />
           </CardTransitionCodes>
           <CardTransitionCodes>
             <div
@@ -132,7 +124,6 @@
 
               <CardFooter :active="active" @toggle-code="toggleCode" />
             </div>
-            <template v-else />
           </CardTransitionCodes>
           <CardTransitionCodes>
             <div
@@ -147,7 +138,6 @@
 
               <CardFooter :active="active" @toggle-code="toggleCode" />
             </div>
-            <template v-else />
           </CardTransitionCodes>
         </div>
       </div>

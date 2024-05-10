@@ -18,7 +18,6 @@
             :updates="updates"
           />
         </template>
-        <template v-else />
       </li>
     </template>
   </ul>

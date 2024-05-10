@@ -18,17 +18,14 @@
           <div v-if="loading" :class="ns.e('loading')">
             <icon-loading />
           </div>
-          <template v-else />
 
           <button v-if="!notClose" :class="ns.e('close')" @click="close">
             <icon-close :hover="'x'" />
           </button>
-          <template v-else />
 
           <div v-if="$slots.header" :class="ns.e('header')">
             <slot name="header" />
           </div>
-          <template v-else />
 
           <div :class="[ns.e('content'), { notFooter: !$slots.footer }]">
             <slot />
@@ -37,7 +34,6 @@
           <div v-if="$slots.footer" :class="ns.e('footer')">
             <slot name="footer" />
           </div>
-          <template v-else />
         </div>
       </div>
     </transition>
