@@ -164,11 +164,11 @@ app.mount('#app')
 - [ ] Time picker
 - [x] Time select
 
-## 破坏性改动
+## 不兼容变化
 
 一些API目前还不稳定，这里有一个完整的指南，告诉你如何从[Vuesax](https://vuesax.com)升级到Vuesax Alpha。
 
-你可以在这里找到所有的破坏性改动: [Breaking Change List (Updating)](#).
+你可以在这里找到所有的不兼容变化: [Breaking Change List (Updating)](#).
 
 ---
 
