@@ -302,13 +302,13 @@ Easily add a pagination with the `vs-pagination` component, the required propert
 
 <template #script>
 
-@[code{21-26}](../.vuepress/components/pagination/color.vue)
+@[code{21-27}](../.vuepress/components/pagination/color.vue)
 
 </template>
 
 <template #style>
 
-@[code{28-43}](../.vuepress/components/pagination/color.vue)
+@[code{29-51}](../.vuepress/components/pagination/color.vue)
 
 </template>
 
@@ -428,13 +428,13 @@ The buttons that are in disabled will skip when changing the value for example o
 
 <template #template>
 
-@[code{1-5} vue{3}](../.vuepress/components/pagination/disabled-items.vue)
+@[code{1-9} vue{5}](../.vuepress/components/pagination/disabled-items.vue)
 
 </template>
 
 <template #script>
 
-@[code{7-11}](../.vuepress/components/pagination/disabled-items.vue)
+@[code{11-30}](../.vuepress/components/pagination/disabled-items.vue)
 
 </template>
 
@@ -456,13 +456,13 @@ The buttons that are in loading will skip when changing the value for example in
 
 <template #template>
 
-@[code{1-5} vue{3}](../.vuepress/components/pagination/loading-items.vue)
+@[code{1-9} vue{5}](../.vuepress/components/pagination/loading-items.vue)
 
 </template>
 
 <template #script>
 
-@[code{7-11}](../.vuepress/components/pagination/loading-items.vue)
+@[code{11-15}](../.vuepress/components/pagination/loading-items.vue)
 
 </template>
 

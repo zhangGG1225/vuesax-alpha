@@ -315,13 +315,13 @@ You can add the functionality of filtering options with the `filter` property, t
 
 <template #template>
 
-@[code{1-31} html{3,11}](../.vuepress/components/select/filter.vue)
+@[code{1-41} html{6}](../.vuepress/components/select/filter.vue)
 
 </template>
 
 <template #script>
 
-@[code{33-39}](../.vuepress/components/select/filter.vue)
+@[code{43-66}](../.vuepress/components/select/filter.vue)
 
 </template>
 
@@ -343,13 +343,13 @@ The value of the select must be an array
 
 <template #template>
 
-@[code{1-51} html{5,21,37}](../.vuepress/components/select/multiple.vue)
+@[code{1-53} html{6,22,38}](../.vuepress/components/select/multiple.vue)
 
 </template>
 
 <template #script>
 
-@[code{53-59}](../.vuepress/components/select/multiple.vue)
+@[code{55-78}](../.vuepress/components/select/multiple.vue)
 
 </template>
 

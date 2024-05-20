@@ -225,13 +225,13 @@ Add a checkbox type input easily and with a beautiful animation
 
 <template #template>
 
-@[code{1-7}](../.vuepress/components/checkbox/default.vue)
+@[code{1-5} vue{3}](../.vuepress/components/checkbox/default.vue)
 
 </template>
 
 <template #script>
 
-@[code{8-12}](../.vuepress/components/checkbox/default.vue)
+@[code{6-10}](../.vuepress/components/checkbox/default.vue)
 
 </template>
 
@@ -343,13 +343,13 @@ checkbox-group element can manage multiple checkboxes in one group by using v-mo
 
 <template #template>
 
-@[code{1-31}](../.vuepress/components/checkbox/object.vue)
+@[code{1-34}](../.vuepress/components/checkbox/object.vue)
 
 </template>
 
 <template #script>
 
-@[code{33-41}](../.vuepress/components/checkbox/object.vue)
+@[code{35-44}](../.vuepress/components/checkbox/object.vue)
 
 </template>
 
@@ -417,13 +417,13 @@ Add a loading status to the component with the property `loading`
 
 <template #template>
 
-@[code{1-10}](../.vuepress/components/checkbox/loading.vue)
+@[code{1-6}](../.vuepress/components/checkbox/loading.vue)
 
 </template>
 
 <template #script>
 
-@[code{12-17}](../.vuepress/components/checkbox/loading.vue)
+@[code{8-13}](../.vuepress/components/checkbox/loading.vue)
 
 </template>
 
@@ -465,13 +465,13 @@ There are some cases where you have several checkboxes and you need one that man
 
 <template #template>
 
-@[code{1-7}](../.vuepress/components/checkbox/indeterminate.vue)
+@[code{1-5}](../.vuepress/components/checkbox/indeterminate.vue)
 
 </template>
 
 <template #script>
 
-@[code{1-7}](../.vuepress/components/checkbox/indeterminate.vue)
+@[code{6-10}](../.vuepress/components/checkbox/indeterminate.vue)
 
 </template>
 

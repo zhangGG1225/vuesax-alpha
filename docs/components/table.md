@@ -363,13 +363,13 @@ declare function sortData<T extends Record<string, unknown>>(
 
 <template #template>
 
-@[code{1-35} vue{5,21}](../.vuepress/components/table/sort.vue)
+@[code{1-32} vue{6,9,12}](../.vuepress/components/table/sort.vue)
 
 </template>
 
 <template #script>
 
-@[code{37-122} vue{15,21,32}](../.vuepress/components/table/sort.vue)
+@[code{34-118}](../.vuepress/components/table/sort.vue)
 
 </template>
 

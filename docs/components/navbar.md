@@ -384,19 +384,19 @@ Remove the border-radius property by making the component square
 
 <template #template>
 
-@[code{1-36}](../.vuepress/components/navbar/square.vue)
+@[code{1-30}](../.vuepress/components/navbar/square.vue)
 
 </template>
 
 <template #script>
 
-@[code{38-42}](../.vuepress/components/navbar/square.vue)
+@[code{32-36}](../.vuepress/components/navbar/square.vue)
 
 </template>
 
 <template #style>
 
-@[code{44-66}](../.vuepress/components/navbar/square.vue)
+@[code{38-60}](../.vuepress/components/navbar/square.vue)
 
 </template>
 

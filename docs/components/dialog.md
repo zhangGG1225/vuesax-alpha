@@ -180,7 +180,7 @@ It generates a Dialog with the `vs-dialog` component, this component is very cus
 
 <template #template>
 
-@[code{1-35} html{4-33}](../.vuepress/components/dialog/default.vue)
+@[code{1-35} vue{4-33}](../.vuepress/components/dialog/default.vue)
 
 </template>
 

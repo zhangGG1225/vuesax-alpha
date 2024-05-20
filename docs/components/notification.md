@@ -758,7 +758,7 @@ You can do great things with this component and some others from vuesax, to add 
 
 <template #script>
 
-@[code{15-43}](../.vuepress/components/notification/example.vue)
+@[code{15-44}](../.vuepress/components/notification/example.vue)
 
 </template>
 

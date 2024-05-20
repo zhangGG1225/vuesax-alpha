@@ -61,17 +61,17 @@ PROPS:
 
         <vs-input
           color="success"
-          placeholder="Success" 
+          placeholder="Success"
         />
 
         <vs-input
           color="danger"
-          placeholder="Danger" 
+          placeholder="Danger"
         />
 
         <vs-input
           color="warn"
-          placeholder="Warn" 
+          placeholder="Warn"
         />
 
         <vs-input
@@ -86,7 +86,7 @@ PROPS:
 
         <vs-input
           color="rgb(59,222,200)"
-          placeholder="HEX" 
+          placeholder="HEX"
         />
       </template>
 
@@ -219,13 +219,13 @@ Add a label to the input with the property `label`
 
 <template #template>
 
-@[code{1-9} html{4}](../.vuepress/components/input/label.vue)
+@[code{1-5} html{3}](../.vuepress/components/input/label.vue)
 
 </template>
 
 <template #script>
 
-@[code{10-14}](../.vuepress/components/input/label.vue)
+@[code{6-10}](../.vuepress/components/input/label.vue)
 
 </template>
 
@@ -447,13 +447,13 @@ Change everything is style of the component with the `input-style` property, the
 
 <template #template>
 
-@[code{1-43} html{8,21}](../.vuepress/components/input/style.vue)
+@[code{1-31} html{3,8,22}](../.vuepress/components/input/style.vue)
 
 </template>
 
 <template #script>
 
-@[code{45-51}](../.vuepress/components/input/style.vue)
+@[code{33-50}](../.vuepress/components/input/style.vue)
 
 </template>
 
