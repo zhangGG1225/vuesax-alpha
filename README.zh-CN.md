@@ -127,7 +127,7 @@ app.mount('#app')
 
 - [x] Alert
 - [x] Avatar
-- [ ] Badge
+- [x] Badge
 - [ ] Breadcrumb
 - [x] Button
 - [x] Card
