@@ -1,6 +1,6 @@
 import type { PageFrontmatter } from 'vuepress-vite'
 
-export interface VsThemeHomeActionOption {
+export type VsThemeHomeActionOption = {
   /**
    * Action name
    */
@@ -12,7 +12,7 @@ export interface VsThemeHomeActionOption {
   link: string
 }
 
-export interface VsThemeHomeFeature {
+export type VsThemeHomeFeature = {
   /**
    * Feature name
    */
@@ -24,14 +24,14 @@ export interface VsThemeHomeFeature {
   details: string
 }
 
-export interface VsThemeHomeFeatureOption extends VsThemeHomeFeature {
+export type VsThemeHomeFeatureOption = VsThemeHomeFeature & {
   /**
    * Feature actions
    */
   action?: VsThemeHomeActionOption
 }
 
-export interface VsThemeProjectHomePageFrontmatter extends PageFrontmatter {
+export type VsThemeProjectHomePageFrontmatter = PageFrontmatter & {
   home: true
   heroText?: string
   tagline?: string
