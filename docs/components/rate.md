@@ -119,7 +119,7 @@ PROPS:
   - name: allow-half
     type: Boolean
     values: 'true,false'
-    description: whether picking half start is allowed.
+    description: whether picking half star is allowed.
     default: 'false'
     link: null
     usage: '#with-allow-half'

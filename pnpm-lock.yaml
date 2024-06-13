@@ -232,8 +232,8 @@ importers:
         specifier: 1.9.9
         version: 1.9.9
       '@vuesax-alpha/icons-vue':
-        specifier: 0.0.2-beta.11
-        version: 0.0.2-beta.11(vue@3.3.1)
+        specifier: 0.0.2-beta.12
+        version: 0.0.2-beta.12(vue@3.3.1)
       '@vueuse/components':
         specifier: ^9.13.0
         version: 9.13.0(vue@3.3.1)
@@ -266,7 +266,7 @@ importers:
         version: 4.2.4(vue@3.3.1)
       vuesax-alpha:
         specifier: npm:vuesax-alpha@latest
-        version: 0.2.0-beta.75(vue@3.3.1)
+        version: 0.2.0-beta.77(vue@3.3.1)
     devDependencies:
       '@types/prismjs':
         specifier: ^1.26.0
@@ -4904,14 +4904,6 @@ packages:
     dependencies:
       local-pkg: 0.5.0
     dev: true
-
-  /@vuesax-alpha/icons-vue@0.0.2-beta.11(vue@3.3.1):
-    resolution: {integrity: sha512-tmTXL8sC0hdNGtqSUyh0sfnS9WYaNG/L0yP8uwkJuQqRh70DMUXsj3WU4JWEwm0Nv+aTRKSyGDDWUhauUsqLGw==}
-    peerDependencies:
-      vue: ^3.2.0
-    dependencies:
-      vue: 3.3.1
-    dev: false
 
   /@vuesax-alpha/icons-vue@0.0.2-beta.12(vue@3.2.45):
     resolution: {integrity: sha512-uQ9/lVEtitCOb3P8wqj78wFRN8rGJsPgW7JaMth9vJFNqoV2fhu1dAjTu1KuR81uCCKy8mK4tvTOmcj61aVmSg==}
@@ -14853,8 +14845,8 @@ packages:
       - vue
     dev: true
 
-  /vuesax-alpha@0.2.0-beta.75(vue@3.3.1):
-    resolution: {integrity: sha512-xx9k0tHX1wfcuzw/qYsDWvPzrNgSAQXLNiXi+0KI/C45rHoNbANkGD8pZeqztK0lAb/j2vNA5Mpj83n30B/aDQ==}
+  /vuesax-alpha@0.2.0-beta.77(vue@3.3.1):
+    resolution: {integrity: sha512-cMR9W2z9xn8k4vF1DFzUPsNvemMgO6INdy/RcTODcg0lkP8yXAKadWud10MXq/zNVXjyie0kn/emEGinBroWoA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
