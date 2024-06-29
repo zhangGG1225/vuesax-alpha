@@ -27,7 +27,7 @@ import { badgeProps } from './badge'
 import type { StyleValue } from 'vue'
 
 defineOptions({
-  name: 'VSBadge',
+  name: 'VsBadge',
 })
 
 const props = defineProps(badgeProps)
