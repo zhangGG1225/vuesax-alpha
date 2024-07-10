@@ -15,7 +15,7 @@ const EN_WEB_TYPES_JSON = resolve(vsOutput, 'web-types.en-US.json')
 
 //regex
 const TYPE_EN_MD = 'en-US.md'
-const COMPONENT_NAME_RE = /\\components\\([^\\.]+)\.md$/
+const COMPONENT_NAME_RE = /[\\/]components[\\/]([^\\/.]+)\.md$/
 const TIP_EN_TITLE_ATTRIBUTES_RE = /PROPS:\n/
 const TIP_EN_TITLE_EVENTS_RE = /EVENTS:\n/
 const TIP_EN_TITLE_SLOTS_RE = /SLOTS:\n/
