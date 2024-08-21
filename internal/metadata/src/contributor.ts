@@ -184,7 +184,7 @@ const octokit = new Octokit({
 async function main() {
   await ensureDir(pathOutput)
 
-  let contributors: Record<string, ContributorInfo[]>
+  let contributors: Record<string, ContributorInfo[]> | void
   if (process.env.DEV) {
     if (existsSync(pathDest)) return
     contributors = {}
