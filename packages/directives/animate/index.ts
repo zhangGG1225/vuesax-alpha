@@ -1,4 +1,4 @@
-import { isNumber, isString } from 'lodash'
+import { isNumber, isString } from 'lodash-unified'
 import type { DirectiveBinding, ObjectDirective } from 'vue'
 
 const animateCssPrefix = 'animate__'

@@ -81,7 +81,7 @@ PROPS:
     link: null
     usage: '#default'
     code: >
-        <vs-badge :value="2" class="item" color="#ccc"> text </vs-badge>
+      <vs-badge :value="2" class="item" color="#ccc"> text </vs-badge>
     #__________________________________
   - name: offset
     type: Array
@@ -150,7 +150,6 @@ UPDATES:
 
 ## Default
 
-
 **Typically displaying unread messages count.**
 You can use it on buttons,text,avatars,etc.
 
@@ -160,7 +159,7 @@ You can use it on buttons,text,avatars,etc.
 
 <template #template>
 
-@[code{1-19}  vue{3-5}](../.vuepress/components/badge/default.vue)
+@[code{1-19} vue{3-5}](../.vuepress/components/badge/default.vue)
 
 </template>
 
@@ -176,11 +175,10 @@ You can use it on buttons,text,avatars,etc.
 
 ## Max Value
 
-
 Set `max` prop to handle overflow situation.
 
 ::: tip
-The max value is defined by property max which is a  `Number`. Note that it only works when value is also a `Number`.
+The max value is defined by property max which is a `Number`. Note that it only works when value is also a `Number`.
 :::
 
 <template #example>
@@ -189,7 +187,7 @@ The max value is defined by property max which is a  `Number`. Note that it only
 
 <template #template>
 
-@[code{1-13}  vue{3-5}](../.vuepress/components/badge/max.vue)
+@[code{1-13} vue{3-5}](../.vuepress/components/badge/max.vue)
 
 </template>
 
@@ -205,11 +203,9 @@ The max value is defined by property max which is a  `Number`. Note that it only
 
 ## Customizing content
 
-
 Displays text content other than numbers.
 
 When value is a String, it can display customized text.
-
 
 <template #example>
 <badge-customizations />
@@ -217,7 +213,7 @@ When value is a String, it can display customized text.
 
 <template #template>
 
-@[code{1-10}  vue{3-5}](../.vuepress/components/badge/customizations.vue)
+@[code{1-10} vue{3-5}](../.vuepress/components/badge/customizations.vue)
 
 </template>
 
@@ -233,11 +229,9 @@ When value is a String, it can display customized text.
 
 ## Red Dot
 
-
 Use a red dot to mark content that needs to be noticed.
 
 Use the attribute `is-dot`. It is a Boolean.
-
 
 <template #example>
 <badge-red-dot />
@@ -245,7 +239,7 @@ Use the attribute `is-dot`. It is a Boolean.
 
 <template #template>
 
-@[code{1-16}  vue{3-5}](../.vuepress/components/badge/red-dot.vue)
+@[code{1-16} vue{3-5}](../.vuepress/components/badge/red-dot.vue)
 
 </template>
 
@@ -261,9 +255,7 @@ Use the attribute `is-dot`. It is a Boolean.
 
 ## Offset
 
-
 Set offset of the badge dot, the format is [left, top], which represents the offset of the status dot from the left and top of the default position.
-
 
 <template #example>
 <badge-offset />
@@ -271,7 +263,7 @@ Set offset of the badge dot, the format is [left, top], which represents the off
 
 <template #template>
 
-@[code{1-15}  vue{3}](../.vuepress/components/badge/offset.vue)
+@[code{1-15} vue{3}](../.vuepress/components/badge/offset.vue)
 
 </template>
 
@@ -287,9 +279,7 @@ Set offset of the badge dot, the format is [left, top], which represents the off
 
 ## Processing
 
-
 Set `processing` prop to indicate it is processing.
-
 
 <template #example>
 <badge-processing />
@@ -297,7 +287,7 @@ Set `processing` prop to indicate it is processing.
 
 <template #template>
 
-@[code{1-16}  vue{3}](../.vuepress/components/badge/processing.vue)
+@[code{1-16} vue{3}](../.vuepress/components/badge/processing.vue)
 
 </template>
 
@@ -313,9 +303,7 @@ Set `processing` prop to indicate it is processing.
 
 ## Controlled visibility
 
-
 Set `hidden` prop to control the visibility of the badge.
-
 
 <template #example>
 <badge-controlled-visibility />
@@ -323,7 +311,7 @@ Set `hidden` prop to control the visibility of the badge.
 
 <template #template>
 
-@[code{1-9}  vue{3}](../.vuepress/components/badge/controlled-visibility.vue)
+@[code{1-9} vue{3}](../.vuepress/components/badge/controlled-visibility.vue)
 
 </template>
 
@@ -345,9 +333,7 @@ Set `hidden` prop to control the visibility of the badge.
 
 ## Show Zero
 
-
 Set `show-zero` prop to display zero.According to reason, it is hidden.
-
 
 <template #example>
 <badge-show-zero />
@@ -355,7 +341,7 @@ Set `show-zero` prop to display zero.According to reason, it is hidden.
 
 <template #template>
 
-@[code{1-11}  vue{6}](../.vuepress/components/badge/show-zero.vue)
+@[code{1-11} vue{6}](../.vuepress/components/badge/show-zero.vue)
 
 </template>
 
@@ -372,7 +358,6 @@ Set `show-zero` prop to display zero.According to reason, it is hidden.
 </template>
 
 </card>
-
 
 <card>
 

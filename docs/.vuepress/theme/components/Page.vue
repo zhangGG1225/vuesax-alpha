@@ -175,7 +175,7 @@ import { usePageData, usePageFrontmatter } from '@vuepress/client'
 import { useThemeData } from '@vuepress/plugin-theme-data/client'
 import { ensureEndingSlash, ensureLeadingSlash } from '@vuepress/shared'
 import { useDateFormat } from '@vueuse/core'
-import lodash from 'lodash'
+import lodash from 'lodash-unified'
 
 import { endingSlashRE, normalize, outboundRE } from '../util'
 
