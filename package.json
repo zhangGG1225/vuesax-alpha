@@ -38,7 +38,7 @@
     "postinstall": "pnpm stub && concurrently \"pnpm gen:version\" \"pnpm run -C internal/metadata dev\""
   },
   "peerDependencies": {
-    "vue": "^3.2.0"
+    "vue": "^3.3.4"
   },
   "dependencies": {
     "@types/lodash": "^4.14.182",
@@ -103,16 +103,16 @@
     "prettier": "^2.7.1",
     "puppeteer": "^21.9.0",
     "resize-observer-polyfill": "^1.5.1",
-    "rimraf": "^3.0.2",
+    "rimraf": "^5.0.10",
     "sass": "^1.53.0",
     "ts-morph": "^14.0.0",
     "tsx": "^3.6.0",
     "type-fest": "^2.14.0",
-    "typescript": "^4.7.4",
+    "typescript": "^4.9.5",
     "unplugin-vue-components": "^0.25.1",
     "unplugin-vue-macros": "^0.11.2",
     "vitest": "0.12.6",
-    "vue": "^3.2.37",
+    "vue": "^3.3.4",
     "vue-router": "^4.0.16",
     "vue-tsc": "^0.38.2"
   },
