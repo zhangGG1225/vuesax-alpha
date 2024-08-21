@@ -18,7 +18,7 @@
     "@vueuse/motion": "2.0.0-beta.12",
     "@vueuse/shared": "^9.13.0",
     "boxicons": "^2.1.4",
-    "lodash": "^4.17.21",
+    "lodash-unified": "^1.0.2",
     "minimist": "^1.2.8",
     "prismjs": "^1.29.0",
     "vue": "^3.3.4",

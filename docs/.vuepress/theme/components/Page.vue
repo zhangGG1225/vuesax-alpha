@@ -175,7 +175,7 @@ import { usePageData, usePageFrontmatter } from '@vuepress/client'
 import { useThemeData } from '@vuepress/plugin-theme-data/client'
 import { ensureEndingSlash, ensureLeadingSlash } from '@vuepress/shared'
 import { useDateFormat } from '@vueuse/core'
-import lodash from 'lodash-unified'
+import { upperFirst } from 'lodash-unified'
 
 import { endingSlashRE, normalize, outboundRE } from '../util'
 
@@ -189,8 +189,6 @@ import type {
 } from '../shared/frontmatter/normal'
 import type { GitPluginPageData } from '@vuepress/plugin-git'
 import type { SidebarConfigArray } from 'vuepress-vite'
-
-const { upperFirst } = lodash
 
 const pageData = usePageData<ThemeNormalApiFrontmatter & GitPluginPageData>()
 const themeData = useThemeData<VuesaxAlphaThemeOptions>()
