@@ -27,7 +27,7 @@ export const radioProps = buildProps({
     type: [String, Number, Boolean],
     default: '',
   },
-  name: { type: String, default: false },
+  name: { type: String, default: '' },
   loading: {
     type: Boolean,
     default: false,
