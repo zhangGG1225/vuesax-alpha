@@ -81,31 +81,11 @@
           transform: scale(1);
           transition: getCssVar(transition-ease) 0.15s;
         }
-        .#{$namespace}-icon-check {
-          opacity: 1;
-          span {
-            .line1 {
-              &:after {
-                width: 100%;
-                transition: getCssVar(transition-ease) 0.1s;
-                left: 0;
-                right: auto;
-              }
-            }
-            .line2 {
-              &:after {
-                transition: all 0.2s ease 0.25s;
-                height: 100%;
-              }
-            }
-            &:after {
-              width: 10px;
-            }
-          }
-        }
+
         &:after {
           opacity: 1;
           transform: scale(1);
+          transition: all 0.2s 0s ease-in-out;
         }
         &:before {
           opacity: 0;
@@ -192,28 +172,23 @@
         font-size: 1.1em;
         transform: scale(0.5);
       }
+
+      .#{$namespace}-icon-check__check {
+        margin-right: 1px;
+      }
+
       &:after {
         content: '';
-        // position: absolute;
-        // top: 0px;
-        // left: 0px;
-        // width: 100%;
-        // height: 100%;
         @include absolute-full;
         background: getColor('color', 1);
         transform: scale(0.5);
         border-radius: inherit;
         opacity: 0;
-        transition: getCssVar(transition-ease);
+        transition: all 0.18s 0.19s ease-in-out;
         z-index: -1;
       }
       &:before {
         content: '';
-        // position: absolute;
-        // top: 0px;
-        // left: 0px;
-        // width: 100%;
-        // height: 100%;
         @include absolute-full;
         border-radius: inherit;
         transition: getCssVar(transition-ease);
@@ -221,8 +196,7 @@
         border: 2px solid getColor('gray-4', 1);
       }
       .#{$namespace}-icon-check {
-        opacity: 0;
-        z-index: 200;
+        z-index: 3;
       }
     }
   }
