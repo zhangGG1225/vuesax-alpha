@@ -24,7 +24,7 @@
 }
 
 @include b(icon) {
-  --color: inherit;
+  --vs-color: inherit;
   height: 1em;
   width: 1em;
   line-height: 1em;
@@ -33,7 +33,7 @@
   align-items: center;
   position: relative;
   fill: currentColor;
-  color: var(--color);
+  color: rgba(var(--vs-color));
   font-size: inherit;
 
   @include when(loading) {
@@ -98,6 +98,8 @@
       stroke-dasharray: 0, 24.19;
       stroke-dashoffset: 0;
       visibility: hidden;
+      transition: stroke-dasharray 0.2s ease-in-out,
+        visibility 0.02s 0.18s;
     }
   }
   @include when(active) {
